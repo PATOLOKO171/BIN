@@ -42,10 +42,8 @@ if(strpos($message, "!bin") === 0){
  $data = json_decode($result, true);
  $bank = $data['data']['bank'];
  $country = $data['data']['country'];
- $brand = $data['data']['vendor'];
  $level = $data['data']['level'];
  $type = $data['data']['type'];
-$flag = $data['data']['country']['emoji'];
  $result1 = $data['result'];
 
     if ($result1 == true) {
