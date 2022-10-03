@@ -12,15 +12,15 @@
     $start_msg = $_ENV['START_MSG']; 
 
 if($message == "/start"){
-    send_message($chat_id,$message_id, "***Hey $firstname \nUse !bin xxxxxx to Check BIN \n$start_msg***");
+    send_message($chat_id,$message_id, "COMANDOS DISPONÍVEIS !BIN \n$start_msg***");
 }
 
 //Bin Lookup
 if(strpos($message, "!bin") === 0){
-    $bin = substr($message, 5);
+    $bin = substr($message, 6);
     $curl = curl_init();
     curl_setopt_array($curl, [
-    CURLOPT_URL => "https://binssuapi.vercel.app/api/".$bin,
+    CURLOPT_URL => "https://bins-ws-api.herokuapp.com/api/".$bin,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",
